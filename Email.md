@@ -1,4 +1,4 @@
-Você receberá um email de convite do GitLab para acessar o repositório do teste.
+Você receberá um e-mail de convite do GitLab para acessar o repositório do teste.
 Este convite tem validade de 1 dia.
 
 Caso não tenha uma conta do GitLab, siga os passos de criação de conta.
