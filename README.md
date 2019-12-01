@@ -28,14 +28,14 @@ This project it what I done in a day, cause I have a free Saturday. I have enjoy
     - nunit installed
     - ElasticSearch docker
 
-## HOW TO USO ##
+## HOW TO USE ##
 
     - Git clone of the project
     - Run docker
-    - Go to the docker directory and type ```docker-compose up```
-    - In another terminal tab/window go to the project directory source and type ```code .```
+    - Go to the docker directory and type *docker-compose up*
+    - In another terminal tab/window go to the project directory source and type *code *
     - With VS Code opened press F5 (Mac) or Ctrl+R (Windows I guess)
-    - To run tests ```dotnet test```
+    - To run tests *dotnet test*
 
 
 ## ITEMS MISSED ##
