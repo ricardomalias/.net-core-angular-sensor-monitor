@@ -1,3 +1,10 @@
+https://www.elastic.co/blog/elasticsearch-as-a-time-series-data-store
+
+
+http://cds.cern.ch/record/2011172/files/LHCb-TALK-2015-060.pdf
+
+
+
 # Desafio para vaga de analista pleno/sênior
 
 ## Considerações Gerais

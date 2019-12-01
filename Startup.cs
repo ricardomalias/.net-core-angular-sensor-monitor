@@ -33,6 +33,8 @@ namespace analyst_challenge
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            services.AddElasticsearch(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -57,7 +59,8 @@ namespace analyst_challenge
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller}/{action}",
+                    defaults: new { controller = "Sensor", action = "Get" });
             });
         }
     }
