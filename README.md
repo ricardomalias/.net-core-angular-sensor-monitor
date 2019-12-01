@@ -44,6 +44,7 @@ This project it what I done in a day, cause I have a free Saturday. I have enjoy
     - interface with table and graphic
     - better scripts to deploy
     - more tests to cover every step of the application
+    - access ElasticSearch using singleton, I have started this, but did not finished
 
 
 
