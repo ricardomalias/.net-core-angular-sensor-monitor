@@ -1,7 +1,55 @@
+
+
+# SOLUTION DESCRIPTION #
+
+I have decided to use Elastic Search to develop this solution, the first who brings to think about him was the volume of information, sensors will "ping" in every second, so we will around 86k inserts per day or 2.5M per month, and per sensor yet. So, I figured that relational database is not a fine solution to do this and we are not relationing this information as well, by the last the schema free looks a great aproach to do this.
+
+The first idea was to use some time series database like InfluxDB, but searching about it found a post which explain that Elastic Search has better performance than InfluxDB:
+
 https://www.elastic.co/blog/elasticsearch-as-a-time-series-data-store
 
+I thought "it's elastic website, so they will say that", but there a link to CERN website comparing both, also using to Time Series:
 
 http://cds.cern.ch/record/2011172/files/LHCb-TALK-2015-060.pdf
+
+
+By the last I thought about MongoDB, but in my experience ElasticSearch/Lucene make a better info aggregation to create graphic, but I didn't have time to real test both on this project. In this case I thought that ElasticSearhc Rest API may help.
+
+https://db-engines.com/en/system/Elasticsearch%3BInfluxDB%3BMongoDB
+
+
+
+This project it what I done in a day, cause I have a free Saturday. I have enjoy the C# and .net experience, but some google search about specific code was not easy to find, therefore probaly I did the wrong searchs.
+
+## ITEMS IMPLEMENTED ##
+
+    - Post to save sensors in async mode
+    - Get to list sensors recently saved
+    - nunit installed
+    - ElasticSearch docker
+
+## HOW TO USO ##
+
+    - Git clone of the project
+    - Run docker
+    - Go to the docker directory and type ```docker-compose up```
+    - In another terminal tab/window go to the project directory source and type ```code .```
+    - With VS Code opened press F5 (Mac) or Ctrl+R (Windows I guess)
+    - To run tests ```dotnet test```
+
+
+## ITEMS MISSED ##
+
+    - endpoint grouping sensors total
+    - interface with table and graphic
+    - better scripts to deploy
+    - more tests to cover every step of the application
+
+
+
+
+
+
 
 
 
