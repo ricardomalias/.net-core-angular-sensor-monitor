@@ -61,6 +61,9 @@ namespace analyst_challenge
                     name: "default",
                     template: "{controller}/{action}",
                     defaults: new { controller = "Sensor", action = "Get" });
+                routes.MapRoute(
+                    name: "aggregation",
+                    template: "sensor/aggregation");
             });
         }
     }

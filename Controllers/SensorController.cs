@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Nest;
@@ -23,12 +25,12 @@ namespace challenge.Controllers
             return sensorService.GetSensor();
         }
 
-        // GET api/sensor/5
-        [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
-        {
-            return "value";
-        }
+        // GET api/sensor/aggregation
+        // [HttpGet("/aggregation")]
+        // public ActionResult<string> GetAggregation()
+        // {
+        //     return "value";
+        // }
 
         // POST api/sensor
         [HttpPost]
@@ -36,21 +38,6 @@ namespace challenge.Controllers
         {
             var sensorService = new SensorApi.Services.SensorService();
             Task task = sensorService.SaveSensor(sensor);
-
-
-            // await _elasticClient.IndexDocumentAsync(post);
-        }
-
-        // PUT api/sensor/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/sensor/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
         }
     }
 }
