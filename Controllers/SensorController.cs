@@ -18,7 +18,7 @@ namespace challenge.Controllers
         // GET api/sensor
         [HttpGet]
         // public ActionResult<IEnumerable<Sensor>> Get()
-        public ActionResult<System.Collections.Generic.List<Sensor>> GetAction()
+        public ActionResult<System.Collections.Generic.List<Sensor>> Get()
         {
             var sensorService = new SensorApi.Services.SensorService();
 
@@ -26,11 +26,12 @@ namespace challenge.Controllers
         }
 
         // GET api/sensor/aggregation
-        // [HttpGet("/aggregation")]
-        // public ActionResult<string> GetAggregation()
-        // {
-        //     return "value";
-        // }
+        [HttpGet("{aggregation}", Name = "Aggregation")]
+        public ActionResult<string> Aggregation()
+        {
+            Console.WriteLine("aquiuiiiiiiiiii");
+            return "value";
+        }
 
         // POST api/sensor
         [HttpPost]

@@ -57,13 +57,12 @@ namespace analyst_challenge
 
             app.UseMvc(routes =>
             {
+                routes.MapRoute("Aggregation", "api/sensor/aggregation", 
+                    defaults: new { controller = "Sensor", action = "Aggregation" });
                 routes.MapRoute(
-                    name: "default",
-                    template: "{controller}/{action}",
+                    name: "Sensor",
+                    template: "/{controller}/{action}/",
                     defaults: new { controller = "Sensor", action = "Get" });
-                routes.MapRoute(
-                    name: "aggregation",
-                    template: "sensor/aggregation");
             });
         }
     }
