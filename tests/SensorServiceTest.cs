@@ -16,6 +16,15 @@ namespace SensorApi.UnitTests.Services
             Assert.That(result, Is.InstanceOf<System.Collections.Generic.List<Models.Sensor>>());
         }
 
+        [Test]
+        public void IsCollectionList_Of_ModelsSensorAggregation()
+        {
+            SensorService sensorService = CreateSensorService();
+            var result = sensorService.GetSensorAggregation();
+
+            Assert.That(result, Is.InstanceOf<System.Collections.Generic.List<Models.SensorAggregation>>());
+        }
+
         private SensorService CreateSensorService()
         {
             return new SensorService();

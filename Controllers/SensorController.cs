@@ -27,10 +27,10 @@ namespace challenge.Controllers
 
         // GET api/sensor/aggregation
         [HttpGet("{aggregation}", Name = "Aggregation")]
-        public ActionResult<string> Aggregation()
+        public ActionResult<System.Collections.Generic.List<SensorAggregation>> Aggregation()
         {
-            Console.WriteLine("aquiuiiiiiiiiii");
-            return "value";
+            var sensorService = new SensorApi.Services.SensorService();
+            return sensorService.GetSensorAggregation();
         }
 
         // POST api/sensor
