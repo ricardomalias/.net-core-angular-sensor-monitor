@@ -27,6 +27,8 @@ This project it what I done in a day, cause I have a free Saturday. I have enjoy
     - Get to list sensors recently saved
     - nunit installed
     - ElasticSearch docker
+    - Aggregation endpoint
+    - interface with table and graphic
 
 ## HOW TO USE ##
 
@@ -37,11 +39,11 @@ This project it what I done in a day, cause I have a free Saturday. I have enjoy
     - With VS Code opened press F5 (Mac) or Ctrl+R (Windows I guess)
     - To run tests dotnet test
     - endpoint grouping sensors total by Elasticsearch aggregation
+    - go to the frontend folder: cd frontend
+    - run: ng serve
 
 ## ITEMS MISSED ##
 
-    
-    - interface with table and graphic
     - better scripts to deploy
     - more tests to cover every step of the application, find a way to mock elasticsearch
     - access ElasticSearch using singleton, I have started this, but did not finished
