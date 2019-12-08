@@ -30,17 +30,17 @@ namespace SensorApi.Services
                     )
                 )
             );
-            // elasticClient.Indices.Create("sensor", i => i
-            //     .Mappings(ms => ms
-            //         .Map<Sensor>(m => m
-            //             .Properties(ps => ps
-            //                 .Keyword(k => k.Name(n => n.tag))))));
-            // elasticClient.Map<Sensor>(m => m.AutoMap());
         }
 
         public System.Collections.Generic.List<Sensor> GetSensor()
         {
-            var searchResponse = elasticClient.Search<Sensor>(s => s.From(0).Size(10));
+            var searchResponse = elasticClient.Search<Sensor>(s => s
+                .From(0)
+                .Size(10)
+                .Sort(sort => sort
+                    .Descending(p => p.timestamp)
+                )
+            );
             var sensors = searchResponse.Documents;
 
             return sensors.ToList();

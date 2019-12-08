@@ -5,7 +5,7 @@ namespace SensorApi.Models
 {
     public class Sensor
     {
-        public int timestamp { get; set; }
+        public double timestamp { get; set; }
         public string tag { get; set; }
         public string value { get; set; }
     }
@@ -19,9 +19,6 @@ namespace SensorApi.Models
         {
             this.tag = key;
             this.count = docCount;
-
-            Console.WriteLine(key);
-            Console.WriteLine(docCount);
         }
     }
 }

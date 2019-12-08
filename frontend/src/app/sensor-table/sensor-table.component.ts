@@ -23,13 +23,18 @@ export class SensorTableComponent implements OnInit {
   ngOnInit() {
     setTimeout(() => {
       this.getSensorRefresh(this)
-    }, 5000)
+    }, 1000)
   }
 
   getSensorRefresh(self) {
-    console.log("aqui")
     self.sensorService.getSensors().subscribe(data => {
+      data = data.map((d) => {
+        d.timestamp = new Date(d.timestamp)
+        return d
+      })
+
       this.sensorData = data
+
       setTimeout(() => {
         this.getSensorRefresh(this)
       }, 5000)
