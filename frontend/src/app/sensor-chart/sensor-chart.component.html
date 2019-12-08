@@ -1,0 +1,21 @@
+<div *ngIf="sensorData">
+    <div class="chart">
+        <canvas baseChart
+            width="585"
+            height="292"
+            [data]="pieChartData"
+            [labels]="pieChartLabels"
+            [chartType]="pieChartType"
+            [options]="pieChartOptions"
+            [colors]="pieChartColors"
+            [legend]="true">
+        </canvas>
+    </div>
+    <ul>
+        <li *ngFor="let agg of sensorData">
+            <span>{{agg.tag}}</span>
+            &nbsp;
+            <span>{{agg.count}}</span>
+        </li>
+    </ul>
+</div>
